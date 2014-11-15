@@ -7,4 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent)
 {
     this->setWindowState(Qt::WindowMaximized);
+
+    dockerManager = new DockerManager(this);
+    dockerManager->renderDockers();
 }
