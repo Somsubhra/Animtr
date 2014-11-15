@@ -7,6 +7,7 @@
 
 // Other includes
 #include "../views/dockers/timeline/timeline.h"
+#include "../views/dockers/onionskin/onionskin.h"
 
 class DockerManager : public QObject
 {
@@ -18,6 +19,7 @@ public:
 
 private:
     Timeline* timelineDocker;
+    OnionSkin* onionSkinDocker;
 
     QList<QDockWidget*>* dockers;
 

@@ -6,6 +6,9 @@ DockerManager::DockerManager(QWidget *parent)
 
     timelineDocker = new Timeline(parent);
     dockers->append(timelineDocker);
+
+    onionSkinDocker = new OnionSkin(parent);
+    dockers->append(onionSkinDocker);
 }
 
 void DockerManager::renderDockers()
