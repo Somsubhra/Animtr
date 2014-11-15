@@ -3,6 +3,7 @@
 
 // Qt includes
 #include <QObject>
+#include <QList>
 
 // Other includes
 #include "../views/dockers/timeline/timeline.h"
@@ -17,6 +18,8 @@ public:
 
 private:
     Timeline* timelineDocker;
+
+    QList<QDockWidget*>* dockers;
 
 signals:
 
