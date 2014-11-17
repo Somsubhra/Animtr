@@ -2,11 +2,19 @@
 
 // Qt includes
 #include <QPalette>
+#include <QColorDialog>
 
 ColorButton::ColorButton(QWidget *parent, QColor color) :
     QPushButton(parent)
 {
     setColor(color);
+
+    connect(this, SIGNAL(clicked()), this, SLOT(onClicked()));
+}
+
+void ColorButton::onClicked()
+{
+    setColor(QColorDialog::getColor(selectedColor));
 }
 
 QColor ColorButton::color()

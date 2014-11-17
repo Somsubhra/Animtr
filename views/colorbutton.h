@@ -20,6 +20,8 @@ signals:
 
 public slots:
 
+private slots:
+    void onClicked();
 };
 
 #endif // COLORBUTTON_H
