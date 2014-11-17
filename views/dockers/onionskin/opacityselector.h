@@ -9,8 +9,6 @@ class OpacitySelector : public QWidget
 public:
     explicit OpacitySelector(QWidget *parent = 0, int frames = 3);
 
-    void setFrames(int frames);
-
     int frames();
 
 protected:
@@ -22,6 +20,7 @@ private:
 signals:
 
 public slots:
+    void setFrames(int frames);
 
 };
 

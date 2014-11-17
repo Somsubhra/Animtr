@@ -27,6 +27,9 @@ OnionSkin::OnionSkin(QWidget *parent) :
     leftFramesColorInp = new ColorButton(mainWidget, QColor(Qt::red));
     rightFramesColorInp = new ColorButton(mainWidget, QColor(Qt::green));
 
+    connect(numberLeftFramesInp, SIGNAL(valueChanged(int)), leftOpacitySelector, SLOT(setFrames(int)));
+    connect(numberRightFramesInp, SIGNAL(valueChanged(int)), rightOpacitySelector, SLOT(setFrames(int)));
+
     mainLayout->addWidget(onionSkinActiveBox, 0, 0);
     mainLayout->addWidget(leftFramesColorInp, 1, 0);
     mainLayout->addWidget(rightFramesColorInp, 1, 1);
