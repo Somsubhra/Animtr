@@ -6,6 +6,7 @@
 #include <QCheckBox>
 
 #include "opacityselector.h"
+#include "../../colorbutton.h"
 
 class OnionSkin : public QDockWidget
 {
@@ -21,6 +22,9 @@ private:
     QSpinBox* numberRightFramesInp;
 
     QCheckBox* onionSkinActiveBox;
+
+    ColorButton* leftFramesColorInp;
+    ColorButton* rightFramesColorInp;
 
 signals:
 

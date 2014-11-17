@@ -4,7 +4,8 @@ SOURCES += \
     views/dockers/timeline/timeline.cpp \
     controllers/dockermanager.cpp \
     views/dockers/onionskin/onionskin.cpp \
-    views/dockers/onionskin/opacityselector.cpp
+    views/dockers/onionskin/opacityselector.cpp \
+    views/colorbutton.cpp
 
 QT += widgets
 
@@ -13,4 +14,5 @@ HEADERS += \
     views/dockers/timeline/timeline.h \
     controllers/dockermanager.h \
     views/dockers/onionskin/onionskin.h \
-    views/dockers/onionskin/opacityselector.h
+    views/dockers/onionskin/opacityselector.h \
+    views/colorbutton.h

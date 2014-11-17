@@ -24,11 +24,16 @@ OnionSkin::OnionSkin(QWidget *parent) :
     onionSkinActiveBox = new QCheckBox(tr("Active"), mainWidget);
     onionSkinActiveBox->setChecked(false);
 
+    leftFramesColorInp = new ColorButton(mainWidget);
+    rightFramesColorInp = new ColorButton(mainWidget);
+
     mainLayout->addWidget(onionSkinActiveBox, 0, 0);
-    mainLayout->addWidget(numberLeftFramesInp, 1, 0);
-    mainLayout->addWidget(numberRightFramesInp, 1, 1);
-    mainLayout->addWidget(leftOpacitySelector, 2, 0);
-    mainLayout->addWidget(rightOpacitySelector, 2, 1);
+    mainLayout->addWidget(leftFramesColorInp, 1, 0);
+    mainLayout->addWidget(rightFramesColorInp, 1, 1);
+    mainLayout->addWidget(numberLeftFramesInp, 2, 0);
+    mainLayout->addWidget(numberRightFramesInp, 2, 1);
+    mainLayout->addWidget(leftOpacitySelector, 3, 0);
+    mainLayout->addWidget(rightOpacitySelector, 3, 1);
 
     mainWidget->setLayout(mainLayout);
     this->setWidget(mainWidget);
