@@ -15,7 +15,7 @@ void OpacitySelector::paintEvent(QPaintEvent *e)
 
     QPainter painter(this);
 
-    painter.setPen(Qt::black);
+    painter.setPen(Qt::gray);
     painter.setBrush(Qt::gray);
 
     painter.drawRect(0, 0, this->width(), this->height());

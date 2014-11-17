@@ -2,6 +2,8 @@
 #define ONIONSKIN_H
 
 #include <QDockWidget>
+#include <QSpinBox>
+#include <QCheckBox>
 
 #include "opacityselector.h"
 
@@ -14,6 +16,11 @@ public:
 private:
     OpacitySelector* leftOpacitySelector;
     OpacitySelector* rightOpacitySelector;
+
+    QSpinBox* numberLeftFramesInp;
+    QSpinBox* numberRightFramesInp;
+
+    QCheckBox* onionSkinActiveBox;
 
 signals:
 

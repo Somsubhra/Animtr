@@ -5,7 +5,7 @@
 OnionSkin::OnionSkin(QWidget *parent) :
     QDockWidget(parent)
 {
-    this->setWindowTitle("Onion Skin");
+    this->setWindowTitle(tr("Onion Skin"));
 
     QWidget* mainWidget = new QWidget(this);
     QGridLayout* mainLayout = new QGridLayout(mainWidget);
@@ -13,8 +13,22 @@ OnionSkin::OnionSkin(QWidget *parent) :
     leftOpacitySelector = new OpacitySelector(mainWidget);
     rightOpacitySelector = new OpacitySelector(mainWidget);
 
-    mainLayout->addWidget(leftOpacitySelector, 0, 0);
-    mainLayout->addWidget(rightOpacitySelector, 0, 1);
+    numberLeftFramesInp = new QSpinBox(mainWidget);
+    numberLeftFramesInp->setRange(1, 10);
+    numberLeftFramesInp->setValue(3);
+
+    numberRightFramesInp = new QSpinBox(mainWidget);
+    numberRightFramesInp->setRange(1, 10);
+    numberRightFramesInp->setValue(3);
+
+    onionSkinActiveBox = new QCheckBox(tr("Active"), mainWidget);
+    onionSkinActiveBox->setChecked(false);
+
+    mainLayout->addWidget(onionSkinActiveBox, 0, 0);
+    mainLayout->addWidget(numberLeftFramesInp, 1, 0);
+    mainLayout->addWidget(numberRightFramesInp, 1, 1);
+    mainLayout->addWidget(leftOpacitySelector, 2, 0);
+    mainLayout->addWidget(rightOpacitySelector, 2, 1);
 
     mainWidget->setLayout(mainLayout);
     this->setWidget(mainWidget);
