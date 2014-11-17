@@ -6,7 +6,7 @@
 OpacitySelector::OpacitySelector(QWidget *parent) :
     QWidget(parent)
 {
-    this->setFixedSize(100, 80);
+    this->setFixedSize(150, 100);
 }
 
 void OpacitySelector::paintEvent(QPaintEvent *e)

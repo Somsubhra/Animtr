@@ -19,5 +19,5 @@ OnionSkin::OnionSkin(QWidget *parent) :
     mainWidget->setLayout(mainLayout);
     this->setWidget(mainWidget);
 
-    this->setMaximumSize(250, 100);
+    this->setMaximumSize(350, 200);
 }
