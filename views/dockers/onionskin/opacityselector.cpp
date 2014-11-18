@@ -6,7 +6,7 @@
 OpacitySelector::OpacitySelector(QWidget *parent, bool leftToRight, int frames, QList<int> opacityValues) :
     QWidget(parent)
 {
-    this->setFixedSize(150, 100);
+    setFixedSize(150, 100);
 
     numberOfFrames = frames;
     isLeftToRight = leftToRight;
@@ -103,7 +103,8 @@ void OpacitySelector::paintEvent(QPaintEvent *e)
 void OpacitySelector::setFrames(int frames)
 {
     numberOfFrames = frames;
-    this->repaint();
+
+    repaint();
 }
 
 int OpacitySelector::frames()

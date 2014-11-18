@@ -3,5 +3,5 @@
 Timeline::Timeline(QWidget *parent) :
     QDockWidget(parent)
 {
-    this->setWindowTitle(tr("Timeline"));
+    setWindowTitle(tr("Timeline"));
 }

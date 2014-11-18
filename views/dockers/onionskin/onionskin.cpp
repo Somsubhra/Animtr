@@ -5,7 +5,7 @@
 OnionSkin::OnionSkin(QWidget *parent) :
     QDockWidget(parent)
 {
-    this->setWindowTitle(tr("Onion Skin"));
+    setWindowTitle(tr("Onion Skin"));
 
     QWidget* mainWidget = new QWidget(this);
     QGridLayout* mainLayout = new QGridLayout(mainWidget);
@@ -39,7 +39,7 @@ OnionSkin::OnionSkin(QWidget *parent) :
     mainLayout->addWidget(rightOpacitySelector, 3, 1);
 
     mainWidget->setLayout(mainLayout);
-    this->setWidget(mainWidget);
+    setWidget(mainWidget);
 
-    this->setMaximumSize(350, 200);
+    setMaximumSize(350, 200);
 }
