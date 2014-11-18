@@ -22,7 +22,7 @@ private:
     Timeline* timelineDocker;
     OnionSkin* onionSkinDocker;
 
-    QList<QDockWidget*>* dockers;
+    QList<Docker*>* dockers;
 
     QMainWindow* mainWindow;
 

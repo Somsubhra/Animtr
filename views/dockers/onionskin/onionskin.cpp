@@ -45,3 +45,8 @@ OnionSkin::OnionSkin(QWidget *parent) :
 
     setMaximumSize(350, 200);
 }
+
+Qt::DockWidgetArea OnionSkin::defaultDockerArea()
+{
+    return Qt::TopDockWidgetArea;
+}

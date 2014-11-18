@@ -6,3 +6,8 @@ Timeline::Timeline(QWidget *parent) :
 {
     setWindowTitle(tr("Timeline"));
 }
+
+Qt::DockWidgetArea Timeline::defaultDockerArea()
+{
+    return Qt::TopDockWidgetArea;
+}

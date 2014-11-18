@@ -5,7 +5,7 @@ DockerManager::DockerManager(QMainWindow *parent)
 {
     mainWindow = parent;
 
-    dockers = new QList<QDockWidget*>();
+    dockers = new QList<Docker*>();
 
     timelineDocker = new Timeline(qobject_cast<QWidget*>(parent));
     dockers->append(timelineDocker);
@@ -19,6 +19,8 @@ void DockerManager::renderDockers()
     int numberOfDockers = dockers->size();
 
     for(int dockerId = 0; dockerId < numberOfDockers; dockerId++) {
-        mainWindow->addDockWidget(Qt::TopDockWidgetArea, dockers->at(dockerId));
+        Docker* docker = dockers->at(dockerId);
+
+        mainWindow->addDockWidget(docker->defaultDockerArea(), docker);
     }
 }

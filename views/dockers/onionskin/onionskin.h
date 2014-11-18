@@ -16,6 +16,8 @@ class OnionSkin : public Docker
 public:
     explicit OnionSkin(QWidget *parent = 0);
 
+    Qt::DockWidgetArea defaultDockerArea();
+
 private:
     OpacitySelector* leftOpacitySelector;
     OpacitySelector* rightOpacitySelector;

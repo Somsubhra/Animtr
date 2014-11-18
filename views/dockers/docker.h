@@ -10,6 +10,8 @@ class Docker : public QDockWidget
 public:
     explicit Docker(QWidget *parent = 0);
 
+    virtual Qt::DockWidgetArea defaultDockerArea() { return Qt::TopDockWidgetArea; }
+
 signals:
 
 public slots:

@@ -10,6 +10,8 @@ class Timeline : public Docker
 public:
     explicit Timeline(QWidget *parent = 0);
 
+    Qt::DockWidgetArea defaultDockerArea();
+
 signals:
 
 public slots:
