@@ -4,13 +4,13 @@
 // Other includes
 #include "opacityselector.h"
 #include "../../colorbutton.h"
+#include "../docker.h"
 
 // Qt includes
-#include <QDockWidget>
 #include <QSpinBox>
 #include <QCheckBox>
 
-class OnionSkin : public QDockWidget
+class OnionSkin : public Docker
 {
     Q_OBJECT
 public:

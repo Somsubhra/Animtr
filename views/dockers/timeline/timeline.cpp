@@ -2,7 +2,7 @@
 #include "timeline.h"
 
 Timeline::Timeline(QWidget *parent) :
-    QDockWidget(parent)
+    Docker(parent)
 {
     setWindowTitle(tr("Timeline"));
 }

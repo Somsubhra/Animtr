@@ -7,7 +7,8 @@ SOURCES += \
     controllers/dockermanager.cpp \
     views/dockers/onionskin/onionskin.cpp \
     views/dockers/onionskin/opacityselector.cpp \
-    views/colorbutton.cpp
+    views/colorbutton.cpp \
+    views/dockers/docker.cpp
 
 HEADERS += \
     views/mainwindow.h \
@@ -15,4 +16,5 @@ HEADERS += \
     controllers/dockermanager.h \
     views/dockers/onionskin/onionskin.h \
     views/dockers/onionskin/opacityselector.h \
-    views/colorbutton.h
+    views/colorbutton.h \
+    views/dockers/docker.h

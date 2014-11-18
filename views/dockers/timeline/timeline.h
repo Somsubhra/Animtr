@@ -1,10 +1,10 @@
 #ifndef TIMELINE_H
 #define TIMELINE_H
 
-// Qt includes
-#include <QDockWidget>
+// Other includes
+#include "../docker.h"
 
-class Timeline : public QDockWidget
+class Timeline : public Docker
 {
     Q_OBJECT
 public:

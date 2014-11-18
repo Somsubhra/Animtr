@@ -5,7 +5,7 @@
 #include <QGridLayout>
 
 OnionSkin::OnionSkin(QWidget *parent) :
-    QDockWidget(parent)
+    Docker(parent)
 {
     setWindowTitle(tr("Onion Skin"));
 
