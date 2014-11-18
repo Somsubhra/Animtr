@@ -1,9 +1,8 @@
+// Include other headers
+#include "../views/mainwindow.h"
 
 // Include Qt headers
 #include <QApplication>
-
-// Include other headers
-#include "../views/mainwindow.h"
 
 /**
  * The main function of the application

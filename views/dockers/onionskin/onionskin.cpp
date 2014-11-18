@@ -1,5 +1,7 @@
+// Other includes
 #include "onionskin.h"
 
+// Qt includes
 #include <QGridLayout>
 
 OnionSkin::OnionSkin(QWidget *parent) :

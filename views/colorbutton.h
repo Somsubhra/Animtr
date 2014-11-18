@@ -1,6 +1,7 @@
 #ifndef COLORBUTTON_H
 #define COLORBUTTON_H
 
+// Qt includes
 #include <QPushButton>
 
 class ColorButton : public QPushButton

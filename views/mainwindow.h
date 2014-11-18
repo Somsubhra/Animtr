@@ -1,11 +1,11 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-// Qt includes
-#include <QMainWindow>
-
 // Other includes
 #include "../controllers/dockermanager.h"
+
+// Qt includes
+#include <QMainWindow>
 
 /**
  * The Main Window of the application

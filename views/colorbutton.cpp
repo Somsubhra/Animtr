@@ -1,3 +1,4 @@
+// Other includes
 #include "colorbutton.h"
 
 // Qt includes

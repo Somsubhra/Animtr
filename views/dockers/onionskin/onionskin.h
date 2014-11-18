@@ -1,12 +1,14 @@
 #ifndef ONIONSKIN_H
 #define ONIONSKIN_H
 
+// Other includes
+#include "opacityselector.h"
+#include "../../colorbutton.h"
+
+// Qt includes
 #include <QDockWidget>
 #include <QSpinBox>
 #include <QCheckBox>
-
-#include "opacityselector.h"
-#include "../../colorbutton.h"
 
 class OnionSkin : public QDockWidget
 {

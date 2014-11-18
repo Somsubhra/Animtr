@@ -1,7 +1,9 @@
+// Other includes
 #include "opacityselector.h"
 
 // Qt includes
 #include <QPainter>
+#include <QMouseEvent>
 
 OpacitySelector::OpacitySelector(QWidget *parent, bool leftToRight, int frames, QList<int> opacityValues) :
     QWidget(parent)
@@ -82,7 +84,7 @@ void OpacitySelector::paintEvent(QPaintEvent *e)
         y1 = (selectedOpacityValues.at(cellIter) * height()) / 100;
         y2 = (selectedOpacityValues.at(cellIter + 1) * height()) / 100;
 
-        if(isLeftToRight) {
+        if(!isLeftToRight) {
             x1 = width() - x1;
             x2 = width() - x2;
         }
@@ -98,6 +100,20 @@ void OpacitySelector::paintEvent(QPaintEvent *e)
     }
 
     painter.drawEllipse(x2 - 5, y2 - 5, 10, 10);
+}
+
+void OpacitySelector::mousePressEvent(QMouseEvent *e)
+{
+    int x = e->x();
+    int y = e->y();
+
+    int cell = x / (width() / numberOfFrames);
+
+    if(!isLeftToRight) {
+        cell = numberOfFrames - cell - 1;
+    }
+
+    setOpacityValue(cell, (y * 100) / height());
 }
 
 void OpacitySelector::setFrames(int frames)

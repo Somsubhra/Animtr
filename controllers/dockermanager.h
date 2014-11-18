@@ -1,13 +1,13 @@
 #ifndef DOCKERMANAGER_H
 #define DOCKERMANAGER_H
 
-// Qt includes
-#include <QObject>
-#include <QList>
-
 // Other includes
 #include "../views/dockers/timeline/timeline.h"
 #include "../views/dockers/onionskin/onionskin.h"
+
+// Qt includes
+#include <QObject>
+#include <QList>
 
 class DockerManager : public QObject
 {

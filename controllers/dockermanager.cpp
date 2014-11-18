@@ -1,3 +1,4 @@
+// Other includes
 #include "dockermanager.h"
 
 DockerManager::DockerManager(QWidget *parent)

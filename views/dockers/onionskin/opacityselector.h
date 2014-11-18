@@ -1,6 +1,7 @@
 #ifndef OPACITYSELECTOR_H
 #define OPACITYSELECTOR_H
 
+// Qt includes
 #include <QWidget>
 #include <QList>
 
@@ -21,6 +22,8 @@ public:
 
 protected:
     void paintEvent(QPaintEvent* e);
+
+    void mousePressEvent(QMouseEvent *e);
 
 private:
     int numberOfFrames;

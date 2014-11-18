@@ -1,6 +1,7 @@
 #ifndef TIMELINE_H
 #define TIMELINE_H
 
+// Qt includes
 #include <QDockWidget>
 
 class Timeline : public QDockWidget
