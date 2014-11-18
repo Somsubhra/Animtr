@@ -8,7 +8,9 @@ SOURCES += \
     views/dockers/onionskin/onionskin.cpp \
     views/dockers/onionskin/opacityselector.cpp \
     views/colorbutton.cpp \
-    views/dockers/docker.cpp
+    views/dockers/docker.cpp \
+    views/dockers/timeline/layerbox.cpp \
+    views/dockers/timeline/framebox.cpp
 
 HEADERS += \
     views/mainwindow.h \
@@ -17,4 +19,6 @@ HEADERS += \
     views/dockers/onionskin/onionskin.h \
     views/dockers/onionskin/opacityselector.h \
     views/colorbutton.h \
-    views/dockers/docker.h
+    views/dockers/docker.h \
+    views/dockers/timeline/layerbox.h \
+    views/dockers/timeline/framebox.h

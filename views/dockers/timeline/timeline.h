@@ -3,6 +3,8 @@
 
 // Other includes
 #include "../docker.h"
+#include "framebox.h"
+#include "layerbox.h"
 
 /**
  * The timeline docker
@@ -20,6 +22,16 @@ public:
      * Returns the default dock widget area
      */
     Qt::DockWidgetArea defaultDockerArea();
+
+    /**
+     * The Frame Box
+     */
+    FrameBox* frameBox;
+
+    /**
+     * The Layer Box
+     */
+    LayerBox* layerBox;
 
 signals:
 
