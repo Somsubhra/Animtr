@@ -59,6 +59,30 @@ void OpacitySelector::paintEvent(QPaintEvent *e)
 
         painter.drawLine(x, y1, x, y2);
     }
+
+    painter.setPen(Qt::black);
+    painter.setBrush(Qt::black);
+
+    int x1, x2, y1, y2;
+
+    for(int cellIter = 0; cellIter < numberOfFrames - 1; cellIter++) {
+        x1 = cellWidth * cellIter + (cellWidth / 2);
+        x2 = x1 + cellWidth;
+
+        y1 = (selectedOpacityValues.at(cellIter) * height()) / 100;
+        y2 = (selectedOpacityValues.at(cellIter + 1) * height()) / 100;
+
+        painter.drawLine(x1, y1, x2, y2);
+
+        painter.drawEllipse(x1 - 5, y1 - 5, 10, 10);
+    }
+
+    if(numberOfFrames == 1) {
+        x2 = width() / 2;
+        y2 = (selectedOpacityValues.at(0) * height()) / 100;
+    }
+
+    painter.drawEllipse(x2 - 5, y2 - 5, 10, 10);
 }
 
 void OpacitySelector::setFrames(int frames)
