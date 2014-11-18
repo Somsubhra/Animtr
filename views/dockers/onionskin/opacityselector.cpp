@@ -20,9 +20,6 @@ OpacitySelector::OpacitySelector(QWidget *parent, bool leftToRight, int frames, 
             selectedOpacityValues.replace(iter, opacityValues.at(iter));
         }
     }
-
-    setOpacityValue(0, 75);
-    setOpacityValue(2, 25);
 }
 
 QList<int> OpacitySelector::opacityValues()
