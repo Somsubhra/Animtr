@@ -2,20 +2,28 @@
 #define OPACITYSELECTOR_H
 
 #include <QWidget>
+#include <QList>
 
 class OpacitySelector : public QWidget
 {
     Q_OBJECT
 public:
-    explicit OpacitySelector(QWidget *parent = 0, int frames = 3);
+    explicit OpacitySelector(QWidget *parent = 0, int frames = 3,
+                             QList<int> opacityValues = QList<int>());
 
     int frames();
+
+    QList<int> opacityValues();
+
+    void setOpacityValues(QList<int> values);
 
 protected:
     void paintEvent(QPaintEvent* e);
 
 private:
     int numberOfFrames;
+
+    QList<int> selectedOpacityValues;
 
 signals:
 

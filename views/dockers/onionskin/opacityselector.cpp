@@ -3,12 +3,38 @@
 // Qt includes
 #include <QPainter>
 
-OpacitySelector::OpacitySelector(QWidget *parent, int frames) :
+OpacitySelector::OpacitySelector(QWidget *parent, int frames, QList<int> opacityValues) :
     QWidget(parent)
 {
     this->setFixedSize(150, 100);
 
     numberOfFrames = frames;
+
+    for(int iter = 0; iter < 10; iter++) {
+        selectedOpacityValues.append(50);
+    }
+
+    if(!opacityValues.isEmpty()) {
+        for(int iter = 0; iter < frames; iter++) {
+            selectedOpacityValues.replace(iter, opacityValues.at(iter));
+        }
+    }
+}
+
+QList<int> OpacitySelector::opacityValues()
+{
+    return selectedOpacityValues;
+}
+
+void OpacitySelector::setOpacityValues(QList<int> values)
+{
+    if(values.size() != numberOfFrames) {
+        return;
+    }
+
+    for(int iter = 0; iter < numberOfFrames; iter++) {
+        selectedOpacityValues.replace(iter, values.at(iter));
+    }
 }
 
 void OpacitySelector::paintEvent(QPaintEvent *e)
