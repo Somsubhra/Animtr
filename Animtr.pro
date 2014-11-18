@@ -1,3 +1,5 @@
+QT += widgets
+
 SOURCES += \
     main/main.cpp \
     views/mainwindow.cpp \
@@ -6,8 +8,6 @@ SOURCES += \
     views/dockers/onionskin/onionskin.cpp \
     views/dockers/onionskin/opacityselector.cpp \
     views/colorbutton.cpp
-
-QT += widgets
 
 HEADERS += \
     views/mainwindow.h \
