@@ -14,9 +14,15 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 public:
+    /**
+     * Constructor for the MainWindow class
+     */
     explicit MainWindow(QWidget *parent = 0);
 
 private:
+    /**
+     * The docker manager
+     */
     DockerManager* dockerManager;
 
 signals:

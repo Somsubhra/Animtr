@@ -10,24 +10,57 @@
 #include <QSpinBox>
 #include <QCheckBox>
 
+/**
+ * The Onion skin docker
+ */
 class OnionSkin : public Docker
 {
     Q_OBJECT
 public:
+    /**
+     * Constructor for the onion skin docker class
+     */
     explicit OnionSkin(QWidget *parent = 0);
 
+    /**
+     * Returns the default dock widget area
+     */
     Qt::DockWidgetArea defaultDockerArea();
 
 private:
+    /**
+     * The opacity selector for the left sided frames
+     */
     OpacitySelector* leftOpacitySelector;
+
+    /**
+     * The opacity selector for the right sided frames
+     */
     OpacitySelector* rightOpacitySelector;
 
+    /**
+     * Input box for number of left sided frames
+     */
     QSpinBox* numberLeftFramesInp;
+
+    /**
+     * Input box for number of right sided frames
+     */
     QSpinBox* numberRightFramesInp;
 
+    /**
+     * Checkbox to toggle activation of onion skinning
+     */
     QCheckBox* onionSkinActiveBox;
 
+    /**
+     * Color selector for skin color of left sided frames
+     */
     ColorButton* leftFramesColorInp;
+
+    /**
+     * Color selector for skin color of right sided frames
+     */
     ColorButton* rightFramesColorInp;
 
 signals:

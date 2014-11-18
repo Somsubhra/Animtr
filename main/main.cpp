@@ -1,7 +1,7 @@
-// Include other headers
+// Other headers
 #include "../views/mainwindow.h"
 
-// Include Qt headers
+// Qt headers
 #include <QApplication>
 
 /**
@@ -12,6 +12,7 @@ int main(int argc, char** argv) {
     // Create an instance of the application
     QApplication app(argc, argv);
 
+    // Create an instance of the main window
     MainWindow w;
     w.show();
 
