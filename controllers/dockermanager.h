@@ -8,12 +8,13 @@
 // Qt includes
 #include <QObject>
 #include <QList>
+#include <QMainWindow>
 
 class DockerManager : public QObject
 {
     Q_OBJECT
 public:
-    explicit DockerManager(QWidget *parent = 0);
+    explicit DockerManager(QMainWindow *parent = 0);
 
     void renderDockers();
 
@@ -22,6 +23,8 @@ private:
     OnionSkin* onionSkinDocker;
 
     QList<QDockWidget*>* dockers;
+
+    QMainWindow* mainWindow;
 
 signals:
 
