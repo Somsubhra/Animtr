@@ -8,7 +8,7 @@ class OpacitySelector : public QWidget
 {
     Q_OBJECT
 public:
-    explicit OpacitySelector(QWidget *parent = 0, int frames = 3,
+    explicit OpacitySelector(QWidget *parent = 0, bool leftToRight = true, int frames = 3,
                              QList<int> opacityValues = QList<int>());
 
     int frames();
@@ -17,11 +17,15 @@ public:
 
     void setOpacityValues(QList<int> values);
 
+    void setOpacityValue(int index, int value);
+
 protected:
     void paintEvent(QPaintEvent* e);
 
 private:
     int numberOfFrames;
+
+    bool isLeftToRight;
 
     QList<int> selectedOpacityValues;
 

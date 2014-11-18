@@ -10,7 +10,7 @@ OnionSkin::OnionSkin(QWidget *parent) :
     QWidget* mainWidget = new QWidget(this);
     QGridLayout* mainLayout = new QGridLayout(mainWidget);
 
-    leftOpacitySelector = new OpacitySelector(mainWidget);
+    leftOpacitySelector = new OpacitySelector(mainWidget, false);
     rightOpacitySelector = new OpacitySelector(mainWidget);
 
     numberLeftFramesInp = new QSpinBox(mainWidget);

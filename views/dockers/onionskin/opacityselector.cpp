@@ -3,12 +3,13 @@
 // Qt includes
 #include <QPainter>
 
-OpacitySelector::OpacitySelector(QWidget *parent, int frames, QList<int> opacityValues) :
+OpacitySelector::OpacitySelector(QWidget *parent, bool leftToRight, int frames, QList<int> opacityValues) :
     QWidget(parent)
 {
     this->setFixedSize(150, 100);
 
     numberOfFrames = frames;
+    isLeftToRight = leftToRight;
 
     for(int iter = 0; iter < 10; iter++) {
         selectedOpacityValues.append(50);
@@ -19,6 +20,9 @@ OpacitySelector::OpacitySelector(QWidget *parent, int frames, QList<int> opacity
             selectedOpacityValues.replace(iter, opacityValues.at(iter));
         }
     }
+
+    setOpacityValue(0, 75);
+    setOpacityValue(2, 25);
 }
 
 QList<int> OpacitySelector::opacityValues()
@@ -35,6 +39,15 @@ void OpacitySelector::setOpacityValues(QList<int> values)
     for(int iter = 0; iter < numberOfFrames; iter++) {
         selectedOpacityValues.replace(iter, values.at(iter));
     }
+
+    repaint();
+}
+
+void OpacitySelector::setOpacityValue(int index, int value)
+{
+    selectedOpacityValues.replace(index, value);
+
+    repaint();
 }
 
 void OpacitySelector::paintEvent(QPaintEvent *e)
@@ -71,6 +84,11 @@ void OpacitySelector::paintEvent(QPaintEvent *e)
 
         y1 = (selectedOpacityValues.at(cellIter) * height()) / 100;
         y2 = (selectedOpacityValues.at(cellIter + 1) * height()) / 100;
+
+        if(isLeftToRight) {
+            x1 = width() - x1;
+            x2 = width() - x2;
+        }
 
         painter.drawLine(x1, y1, x2, y2);
 
