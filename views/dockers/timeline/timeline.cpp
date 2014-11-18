@@ -14,7 +14,8 @@ Timeline::Timeline(QWidget *parent) :
     QGridLayout* mainLayout = new QGridLayout();
     QWidget* mainWidget = new QWidget(this);
 
-    QScrollArea* layerBoxScrollArea = new QScrollArea(mainWidget);
+    QScrollArea* layerBoxScrollArea = new QScrollArea(mainWidget);\
+    layerBoxScrollArea->setMaximumWidth(250);
     QScrollArea* frameBoxScrollArea = new QScrollArea(mainWidget);
 
     QSplitter* splitter = new QSplitter(mainWidget);
