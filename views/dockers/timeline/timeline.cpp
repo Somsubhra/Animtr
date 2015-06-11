@@ -35,6 +35,19 @@ Timeline::Timeline(QWidget *parent) :
     setMaximumHeight(200);
 }
 
+Timeline::~Timeline()
+{
+    if(layerBox) {
+        delete layerBox;
+        layerBox = 0;
+    }
+
+    if(frameBox) {
+        delete frameBox;
+        frameBox = 0;
+    }
+}
+
 Qt::DockWidgetArea Timeline::defaultDockerArea()
 {
     return Qt::TopDockWidgetArea;

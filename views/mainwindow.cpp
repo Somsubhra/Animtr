@@ -9,3 +9,11 @@ MainWindow::MainWindow(QWidget *parent) :
     dockerManager = new DockerManager(this);
     dockerManager->renderDockers();
 }
+
+MainWindow::~MainWindow()
+{
+    if(dockerManager) {
+        delete dockerManager;
+        dockerManager = 0;
+    }
+}

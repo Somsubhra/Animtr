@@ -23,6 +23,11 @@ public:
     explicit OnionSkin(QWidget *parent = 0);
 
     /**
+     * Destructor for the onion skin docker class
+     */
+    ~OnionSkin();
+
+    /**
      * Returns the default dock widget area
      */
     Qt::DockWidgetArea defaultDockerArea();

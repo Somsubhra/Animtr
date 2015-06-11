@@ -19,6 +19,11 @@ public:
     explicit Timeline(QWidget *parent = 0);
 
     /**
+     * Destructor for the timeline class
+     */
+    ~Timeline();
+
+    /**
      * Returns the default dock widget area
      */
     Qt::DockWidgetArea defaultDockerArea();

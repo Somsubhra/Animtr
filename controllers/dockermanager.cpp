@@ -14,6 +14,20 @@ DockerManager::DockerManager(QMainWindow *parent)
     dockers->append(onionSkinDocker);
 }
 
+DockerManager::~DockerManager()
+{
+    int numberOfDockers = dockers->size();
+
+    for(int dockerId = 0; dockerId < numberOfDockers; dockerId++) {
+        delete dockers->at(dockerId);
+    }
+
+    if(dockers) {
+        delete dockers;
+        dockers = 0;
+    }
+}
+
 void DockerManager::renderDockers()
 {
     int numberOfDockers = dockers->size();

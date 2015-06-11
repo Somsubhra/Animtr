@@ -24,6 +24,11 @@ public:
     explicit DockerManager(QMainWindow *parent = 0);
 
     /**
+     * Destructor for the docker manager class
+     */
+    ~DockerManager();
+
+    /**
      * Render all the dockers
      */
     void renderDockers();

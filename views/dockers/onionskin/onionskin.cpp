@@ -46,6 +46,44 @@ OnionSkin::OnionSkin(QWidget *parent) :
     setMaximumSize(350, 200);
 }
 
+OnionSkin::~OnionSkin()
+{
+    if(leftOpacitySelector) {
+        delete leftOpacitySelector;
+        leftOpacitySelector = 0;
+    }
+
+    if(rightOpacitySelector) {
+        delete rightOpacitySelector;
+        rightOpacitySelector = 0;
+    }
+
+    if(numberLeftFramesInp) {
+        delete numberLeftFramesInp;
+        numberLeftFramesInp = 0;
+    }
+
+    if(numberRightFramesInp) {
+        delete numberRightFramesInp;
+        numberRightFramesInp = 0;
+    }
+
+    if(onionSkinActiveBox) {
+        delete onionSkinActiveBox;
+        onionSkinActiveBox = 0;
+    }
+
+    if(leftFramesColorInp) {
+        delete leftFramesColorInp;
+        leftFramesColorInp = 0;
+    }
+
+    if(rightFramesColorInp) {
+        delete rightFramesColorInp;
+        rightFramesColorInp = 0;
+    }
+}
+
 Qt::DockWidgetArea OnionSkin::defaultDockerArea()
 {
     return Qt::TopDockWidgetArea;
