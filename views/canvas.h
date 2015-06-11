@@ -36,6 +36,21 @@ protected:
      */
     void paintEvent(QPaintEvent *event);
 
+    /**
+     * The event handler for mouse press event
+     */
+    void mousePressEvent(QMouseEvent *event);
+
+    /**
+     * The event handler for the mouse move event
+     */
+    void mouseMoveEvent(QMouseEvent *event);
+
+    /**
+     * The event handler for the mouse release event
+     */
+    void mouseReleaseEvent(QMouseEvent *event);
+
 signals:
 
 public slots:
@@ -47,8 +62,31 @@ private:
      */
     void resizeImage(QImage *image, const QSize &newSize);
 
+    /**
+     * Draw line to particular point
+     */
+    void drawLineTo(const QPoint &endPoint);
+
 private:
+    /**
+     * The image on canvas
+     */
     QImage image;
+
+    /**
+     * Whether image is modified or not
+     */
+    bool isModified;
+
+    /**
+     * Whether drawing on canvas currently or not
+     */
+    bool isDrawing;
+
+    /**
+     * The last point while drawing
+     */
+    QPoint lastPoint;
 };
 
 #endif // CANVAS_H
