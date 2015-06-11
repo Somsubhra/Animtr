@@ -3,6 +3,7 @@
 
 // Other includes
 #include "../controllers/dockermanager.h"
+#include "canvas.h"
 
 // Qt includes
 #include <QMainWindow>
@@ -26,6 +27,11 @@ private:
      * The docker manager
      */
     DockerManager *dockerManager;
+
+    /**
+     * The canvas widget
+     */
+    Canvas *canvas;
 
 signals:
 

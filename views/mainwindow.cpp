@@ -8,6 +8,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     dockerManager = new DockerManager(this);
     dockerManager->renderDockers();
+
+    canvas = new Canvas(this);
+    setCentralWidget(canvas);
 }
 
 MainWindow::~MainWindow()
@@ -15,5 +18,10 @@ MainWindow::~MainWindow()
     if(dockerManager) {
         delete dockerManager;
         dockerManager = 0;
+    }
+
+    if(canvas) {
+        delete canvas;
+        canvas = 0;
     }
 }

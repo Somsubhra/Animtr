@@ -3,6 +3,7 @@
 
 // Qt includes
 #include <QWidget>
+#include <QImage>
 
 // Forward declarations
 class MainWindow;
@@ -24,9 +25,30 @@ public:
      */
     ~Canvas();
 
+protected:
+    /**
+     * The event handler for resize event
+     */
+    void resizeEvent(QResizeEvent *event);
+
+    /**
+     * The event handler for paint event
+     */
+    void paintEvent(QPaintEvent *event);
+
 signals:
 
 public slots:
+
+private:
+
+    /**
+     * Resize the image on canvas
+     */
+    void resizeImage(QImage *image, const QSize &newSize);
+
+private:
+    QImage image;
 };
 
 #endif // CANVAS_H
