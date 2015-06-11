@@ -10,6 +10,9 @@
 #include <QSpinBox>
 #include <QCheckBox>
 
+// Forward declarations
+class MainWindow;
+
 /**
  * The Onion skin docker
  */
@@ -20,7 +23,7 @@ public:
     /**
      * Constructor for the onion skin docker class
      */
-    explicit OnionSkin(QWidget *parent = 0);
+    explicit OnionSkin(MainWindow *parent = 0);
 
     /**
      * Destructor for the onion skin docker class
@@ -36,37 +39,37 @@ private:
     /**
      * The opacity selector for the left sided frames
      */
-    OpacitySelector* leftOpacitySelector;
+    OpacitySelector *leftOpacitySelector;
 
     /**
      * The opacity selector for the right sided frames
      */
-    OpacitySelector* rightOpacitySelector;
+    OpacitySelector *rightOpacitySelector;
 
     /**
      * Input box for number of left sided frames
      */
-    QSpinBox* numberLeftFramesInp;
+    QSpinBox *numberLeftFramesInp;
 
     /**
      * Input box for number of right sided frames
      */
-    QSpinBox* numberRightFramesInp;
+    QSpinBox *numberRightFramesInp;
 
     /**
      * Checkbox to toggle activation of onion skinning
      */
-    QCheckBox* onionSkinActiveBox;
+    QCheckBox *onionSkinActiveBox;
 
     /**
      * Color selector for skin color of left sided frames
      */
-    ColorButton* leftFramesColorInp;
+    ColorButton *leftFramesColorInp;
 
     /**
      * Color selector for skin color of right sided frames
      */
-    ColorButton* rightFramesColorInp;
+    ColorButton *rightFramesColorInp;
 
 signals:
 

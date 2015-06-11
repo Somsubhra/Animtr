@@ -1,16 +1,17 @@
 // Other includes
 #include "dockermanager.h"
+#include "../views/mainwindow.h"
 
-DockerManager::DockerManager(QMainWindow *parent)
+DockerManager::DockerManager(MainWindow *parent)
 {
     mainWindow = parent;
 
     dockers = new QList<Docker*>();
 
-    timelineDocker = new Timeline(qobject_cast<QWidget*>(parent));
+    timelineDocker = new Timeline(parent);
     dockers->append(timelineDocker);
 
-    onionSkinDocker = new OnionSkin(qobject_cast<QWidget*>(parent));
+    onionSkinDocker = new OnionSkin(parent);
     dockers->append(onionSkinDocker);
 }
 
@@ -33,7 +34,7 @@ void DockerManager::renderDockers()
     int numberOfDockers = dockers->size();
 
     for(int dockerId = 0; dockerId < numberOfDockers; dockerId++) {
-        Docker* docker = dockers->at(dockerId);
+        Docker *docker = dockers->at(dockerId);
 
         mainWindow->addDockWidget(docker->defaultDockerArea(), docker);
     }

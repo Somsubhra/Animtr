@@ -10,7 +10,8 @@ SOURCES += \
     views/colorbutton.cpp \
     views/dockers/docker.cpp \
     views/dockers/timeline/layerbox.cpp \
-    views/dockers/timeline/framebox.cpp
+    views/dockers/timeline/framebox.cpp \
+    views/canvas.cpp
 
 HEADERS += \
     views/mainwindow.h \
@@ -21,4 +22,5 @@ HEADERS += \
     views/colorbutton.h \
     views/dockers/docker.h \
     views/dockers/timeline/layerbox.h \
-    views/dockers/timeline/framebox.h
+    views/dockers/timeline/framebox.h \
+    views/canvas.h

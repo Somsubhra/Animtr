@@ -8,7 +8,9 @@
 // Qt includes
 #include <QObject>
 #include <QList>
-#include <QMainWindow>
+
+// Forward declarations
+class MainWindow;
 
 /**
  * The Docker Manager class
@@ -21,7 +23,7 @@ public:
     /**
      * Constructor for the docker manager class
      */
-    explicit DockerManager(QMainWindow *parent = 0);
+    explicit DockerManager(MainWindow *parent = 0);
 
     /**
      * Destructor for the docker manager class
@@ -37,22 +39,22 @@ private:
     /**
      * The timeline docker
      */
-    Timeline* timelineDocker;
+    Timeline *timelineDocker;
 
     /**
      * The Onion skin docker
      */
-    OnionSkin* onionSkinDocker;
+    OnionSkin *onionSkinDocker;
 
     /**
      * List of all dockers
      */
-    QList<Docker*>* dockers;
+    QList<Docker*> *dockers;
 
     /**
      * The Main Window of the application
      */
-    QMainWindow* mainWindow;
+    MainWindow *mainWindow;
 
 signals:
 

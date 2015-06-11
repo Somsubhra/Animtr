@@ -4,6 +4,9 @@
 // Qt includes
 #include <QDockWidget>
 
+// Forward declarations
+class MainWindow;
+
 /**
  * A Docker class inherited by all the dockers
  */
@@ -14,7 +17,7 @@ public:
     /**
      * Constructor for the docker class
      */
-    explicit Docker(QWidget *parent = 0);
+    explicit Docker(MainWindow *parent = 0);
 
     /**
      * Returns the default docker position
@@ -22,10 +25,17 @@ public:
      */
     virtual Qt::DockWidgetArea defaultDockerArea() { return Qt::TopDockWidgetArea; }
 
+    /**
+     * Returns the main application window
+     */
+    MainWindow* getAppWindow();
+
 signals:
 
 public slots:
 
+private:
+    MainWindow *appWindow;
 };
 
 #endif // DOCKER_H

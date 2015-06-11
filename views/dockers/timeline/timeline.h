@@ -6,6 +6,9 @@
 #include "framebox.h"
 #include "layerbox.h"
 
+// Forward declarations
+class MainWindow;
+
 /**
  * The timeline docker
  */
@@ -16,7 +19,7 @@ public:
     /**
      * Constructor for timeline class
      */
-    explicit Timeline(QWidget *parent = 0);
+    explicit Timeline(MainWindow *parent = 0);
 
     /**
      * Destructor for the timeline class
@@ -28,15 +31,17 @@ public:
      */
     Qt::DockWidgetArea defaultDockerArea();
 
+private:
+
     /**
      * The Frame Box
      */
-    FrameBox* frameBox;
+    FrameBox *frameBox;
 
     /**
      * The Layer Box
      */
-    LayerBox* layerBox;
+    LayerBox *layerBox;
 
 signals:
 

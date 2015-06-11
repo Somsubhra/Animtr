@@ -1,16 +1,17 @@
 // Other includes
 #include "onionskin.h"
+#include "../../mainwindow.h"
 
 // Qt includes
 #include <QGridLayout>
 
-OnionSkin::OnionSkin(QWidget *parent) :
+OnionSkin::OnionSkin(MainWindow *parent) :
     Docker(parent)
 {
     setWindowTitle(tr("Onion Skin"));
 
-    QWidget* mainWidget = new QWidget(this);
-    QGridLayout* mainLayout = new QGridLayout(mainWidget);
+    QWidget *mainWidget = new QWidget(this);
+    QGridLayout *mainLayout = new QGridLayout(mainWidget);
 
     leftOpacitySelector = new OpacitySelector(mainWidget, false);
     rightOpacitySelector = new OpacitySelector(mainWidget);

@@ -25,7 +25,7 @@ private:
     /**
      * The docker manager
      */
-    DockerManager* dockerManager;
+    DockerManager *dockerManager;
 
 signals:
 

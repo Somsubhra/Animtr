@@ -1,29 +1,30 @@
 // Other includes
 #include "timeline.h"
+#include "../../mainwindow.h"
 
 // Qt includes
 #include <QGridLayout>
 #include <QScrollArea>
 #include <QSplitter>
 
-Timeline::Timeline(QWidget *parent) :
+Timeline::Timeline(MainWindow *parent) :
     Docker(parent)
 {
     setWindowTitle(tr("Timeline"));
 
-    QGridLayout* mainLayout = new QGridLayout();
-    QWidget* mainWidget = new QWidget(this);
+    QGridLayout *mainLayout = new QGridLayout();
+    QWidget *mainWidget = new QWidget(this);
 
-    QScrollArea* layerBoxScrollArea = new QScrollArea(mainWidget);
+    QScrollArea *layerBoxScrollArea = new QScrollArea(mainWidget);
     layerBox = new LayerBox(layerBoxScrollArea);
     layerBoxScrollArea->setWidget(layerBox);
     layerBoxScrollArea->setMaximumWidth(250);
 
-    QScrollArea* frameBoxScrollArea = new QScrollArea(mainWidget);
+    QScrollArea *frameBoxScrollArea = new QScrollArea(mainWidget);
     frameBox = new FrameBox(frameBoxScrollArea);
     frameBoxScrollArea->setWidget(frameBox);
 
-    QSplitter* splitter = new QSplitter(mainWidget);
+    QSplitter *splitter = new QSplitter(mainWidget);
     splitter->addWidget(layerBoxScrollArea);
     splitter->addWidget(frameBoxScrollArea);
 
