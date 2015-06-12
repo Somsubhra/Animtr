@@ -62,6 +62,11 @@ void Canvas::mouseReleaseEvent(QMouseEvent *event)
     }
 }
 
+void Canvas::tabletEvent(QTabletEvent *event)
+{
+    Q_UNUSED(event);
+}
+
 void Canvas::resizeImage(QImage *image, const QSize &newSize)
 {
     if(image->size() == newSize) {

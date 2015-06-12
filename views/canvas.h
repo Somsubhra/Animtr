@@ -51,6 +51,11 @@ protected:
      */
     void mouseReleaseEvent(QMouseEvent *event);
 
+    /**
+     * The event handler for any tablet event
+     */
+    void tabletEvent(QTabletEvent* event);
+
 signals:
 
 public slots:
