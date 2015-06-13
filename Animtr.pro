@@ -11,7 +11,8 @@ SOURCES += \
     views/dockers/docker.cpp \
     views/dockers/timeline/layerbox.cpp \
     views/dockers/timeline/framebox.cpp \
-    views/canvas.cpp
+    views/canvas.cpp \
+    controllers/actioncollection.cpp
 
 HEADERS += \
     views/mainwindow.h \
@@ -23,4 +24,5 @@ HEADERS += \
     views/dockers/docker.h \
     views/dockers/timeline/layerbox.h \
     views/dockers/timeline/framebox.h \
-    views/canvas.h
+    views/canvas.h \
+    controllers/actioncollection.h
