@@ -35,9 +35,35 @@ signals:
 public slots:
 
     /**
+     * Create new file
+     */
+    void newFile();
+
+    /**
+     * Open a file
+     */
+    void openFile();
+
+    /**
+     * Save a file
+     */
+    void saveFile();
+
+    /**
+     * Save a file as
+     */
+    void saveFileAs();
+
+    /**
+     * Export the file to a given format
+     */
+    void exportFile();
+
+    /**
      * Exit the application
      */
     void exitApplication();
+
 
 private:
 
