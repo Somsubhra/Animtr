@@ -3,8 +3,9 @@
 
 // Other includes
 #include "../controllers/dockermanager.h"
-#include "canvas.h"
 #include "../controllers/actioncollection.h"
+#include "../controllers/standardactions.h"
+#include "canvas.h"
 
 // Qt includes
 #include <QMainWindow>
@@ -21,6 +22,9 @@ public:
      */
     explicit MainWindow(QWidget *parent = 0);
 
+    /**
+     * Destructor for the MainWindow class
+     */
     ~MainWindow();
 
 private:
@@ -46,7 +50,16 @@ signals:
 public slots:
 
 private:
+
+    /**
+     * The collection of all actions
+     */
     ActionCollection *actionCollection;
+
+    /**
+     * The standard actions of the application
+     */
+    StandardActions *standardActions;
 };
 
 #endif // MAINWINDOW_H

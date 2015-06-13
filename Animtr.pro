@@ -12,7 +12,8 @@ SOURCES += \
     views/dockers/timeline/layerbox.cpp \
     views/dockers/timeline/framebox.cpp \
     views/canvas.cpp \
-    controllers/actioncollection.cpp
+    controllers/actioncollection.cpp \
+    controllers/standardactions.cpp
 
 HEADERS += \
     views/mainwindow.h \
@@ -25,4 +26,5 @@ HEADERS += \
     views/dockers/timeline/layerbox.h \
     views/dockers/timeline/framebox.h \
     views/canvas.h \
-    controllers/actioncollection.h
+    controllers/actioncollection.h \
+    controllers/standardactions.h

@@ -12,6 +12,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     actionCollection = new ActionCollection(this);
 
+    standardActions = new StandardActions(this);
+    standardActions->createStandardActions();
+
     dockerManager = new DockerManager(this);
     dockerManager->renderDockers();
 
@@ -26,6 +29,11 @@ MainWindow::~MainWindow()
     if(actionCollection) {
         delete actionCollection;
         actionCollection = 0;
+    }
+
+    if(standardActions) {
+        delete standardActions;
+        standardActions = 0;
     }
 
     if(dockerManager) {
