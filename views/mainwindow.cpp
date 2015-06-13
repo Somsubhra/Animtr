@@ -10,6 +10,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     setWindowState(Qt::WindowMaximized);
 
+    actionCollection = new ActionCollection(this);
+
     dockerManager = new DockerManager(this);
     dockerManager->renderDockers();
 
@@ -21,6 +23,11 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
+    if(actionCollection) {
+        delete actionCollection;
+        actionCollection = 0;
+    }
+
     if(dockerManager) {
         delete dockerManager;
         dockerManager = 0;

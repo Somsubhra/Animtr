@@ -4,6 +4,7 @@
 // Other includes
 #include "../controllers/dockermanager.h"
 #include "canvas.h"
+#include "../controllers/actioncollection.h"
 
 // Qt includes
 #include <QMainWindow>
@@ -44,6 +45,8 @@ signals:
 
 public slots:
 
+private:
+    ActionCollection *actionCollection;
 };
 
 #endif // MAINWINDOW_H
