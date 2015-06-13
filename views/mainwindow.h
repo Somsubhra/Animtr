@@ -23,6 +23,13 @@ public:
     ~MainWindow();
 
 private:
+
+    /**
+     * Create the menu bar
+     */
+    void createMenuBar();
+
+private:
     /**
      * The docker manager
      */
