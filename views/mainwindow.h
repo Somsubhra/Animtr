@@ -27,6 +27,11 @@ public:
      */
     ~MainWindow();
 
+    /**
+     * Get the Action Collection of the application
+     */
+    ActionCollection* getActionCollection();
+
 private:
 
     /**

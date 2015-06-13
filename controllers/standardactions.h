@@ -34,6 +34,11 @@ signals:
 
 public slots:
 
+    /**
+     * Exit the application
+     */
+    void exitApplication();
+
 private:
 
     /**

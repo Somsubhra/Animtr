@@ -47,9 +47,15 @@ MainWindow::~MainWindow()
     }
 }
 
+ActionCollection* MainWindow::getActionCollection()
+{
+    return actionCollection;
+}
+
 void MainWindow::createMenuBar()
 {
     QMenu *fileMenu = menuBar()->addMenu(tr("File"));
+    fileMenu->addAction(actionCollection->action("exit"));
 
     QMenu *editMenu = menuBar()->addMenu(tr("Edit"));
 

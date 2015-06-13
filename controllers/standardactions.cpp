@@ -15,6 +15,13 @@ StandardActions::~StandardActions()
 
 void StandardActions::createStandardActions()
 {
-
+    QAction *exitAction = new QAction(tr("Exit"), mainWindow);
+    exitAction->setShortcut(QKeySequence("Ctrl+Q"));
+    mainWindow->getActionCollection()->addAction("exit", exitAction);
+    connect(exitAction, SIGNAL(triggered()), this, SLOT(exitApplication()));
 }
 
+void StandardActions::exitApplication()
+{
+    mainWindow->close();
+}
