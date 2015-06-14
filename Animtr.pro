@@ -14,7 +14,8 @@ SOURCES += \
     views/canvas.cpp \
     controllers/actioncollection.cpp \
     controllers/standardactions.cpp \
-    controllers/imageactions.cpp
+    controllers/imageactions.cpp \
+    controllers/animationactions.cpp
 
 HEADERS += \
     views/mainwindow.h \
@@ -29,4 +30,5 @@ HEADERS += \
     views/canvas.h \
     controllers/actioncollection.h \
     controllers/standardactions.h \
-    controllers/imageactions.h
+    controllers/imageactions.h \
+    controllers/animationactions.h

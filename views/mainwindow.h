@@ -6,6 +6,7 @@
 #include "../controllers/actioncollection.h"
 #include "../controllers/standardactions.h"
 #include "../controllers/imageactions.h"
+#include "../controllers/animationactions.h"
 #include "canvas.h"
 
 // Qt includes
@@ -71,6 +72,11 @@ private:
      * The image actions of the application
      */
     ImageActions *imageActions;
+
+    /**
+     * The animations actions of the application
+     */
+    AnimationActions *animationActions;
 };
 
 #endif // MAINWINDOW_H
