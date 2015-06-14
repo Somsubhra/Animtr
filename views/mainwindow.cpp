@@ -15,6 +15,9 @@ MainWindow::MainWindow(QWidget *parent) :
     standardActions = new StandardActions(this);
     standardActions->createStandardActions();
 
+    imageActions = new ImageActions(this);
+    imageActions->createImageActions();
+
     dockerManager = new DockerManager(this);
     dockerManager->renderDockers();
 
@@ -34,6 +37,11 @@ MainWindow::~MainWindow()
     if(standardActions) {
         delete standardActions;
         standardActions = 0;
+    }
+
+    if(imageActions) {
+        delete imageActions;
+        imageActions = 0;
     }
 
     if(dockerManager) {

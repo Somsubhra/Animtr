@@ -5,6 +5,7 @@
 #include "../controllers/dockermanager.h"
 #include "../controllers/actioncollection.h"
 #include "../controllers/standardactions.h"
+#include "../controllers/imageactions.h"
 #include "canvas.h"
 
 // Qt includes
@@ -65,6 +66,11 @@ private:
      * The standard actions of the application
      */
     StandardActions *standardActions;
+
+    /**
+     * The image actions of the application
+     */
+    ImageActions *imageActions;
 };
 
 #endif // MAINWINDOW_H
