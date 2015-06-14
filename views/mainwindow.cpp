@@ -72,5 +72,7 @@ void MainWindow::createMenuBar()
 
     QMenu *animationMenu = menuBar()->addMenu(tr("Animation"));
 
+    QMenu *settingsMenu = menuBar()->addMenu(tr("Settings"));
+
     QMenu *helpMenu = menuBar()->addMenu(tr("Help"));
 }
