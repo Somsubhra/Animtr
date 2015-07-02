@@ -81,6 +81,12 @@ void MainWindow::createMenuBar()
     fileMenu->addAction(actionCollection->action("exit"));
 
     QMenu *editMenu = menuBar()->addMenu(tr("Edit"));
+    editMenu->addAction(actionCollection->action("cut"));
+    editMenu->addAction(actionCollection->action("copy"));
+    editMenu->addAction(actionCollection->action("paste"));
+    editMenu->addSeparator();
+    editMenu->addAction(actionCollection->action("undo"));
+    editMenu->addAction(actionCollection->action("redo"));
 
     QMenu *viewMenu = menuBar()->addMenu(tr("View"));
 

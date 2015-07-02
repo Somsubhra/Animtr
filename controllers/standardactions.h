@@ -64,6 +64,30 @@ public slots:
      */
     void exitApplication();
 
+    /**
+     * Cut action
+     */
+    void cut();
+
+    /**
+     * Copy action
+     */
+    void copy();
+
+    /**
+     * Paste action
+     */
+    void paste();
+
+    /**
+     * Undo action
+     */
+    void undo();
+
+    /**
+     * Redo action
+     */
+    void redo();
 
 private:
 
